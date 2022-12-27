@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<button>
+<div href="/{{app.user ? 'logout' : 'login' }}"
+@click="isOpen = false">
+{{app.user ? 'logout' : 'login' }}
+</div>
+</button>
+    <div class="w-4/5 m-auto text-center">
+        <div class="py-12 border-b border-gray-200">
+            <h1 class="text-4xl pt-12 pb-8">
+               <a href="/student/info/">Student infomation</a>
+            </h1>
+        </div>
+    </div> 
+    <div class="w-4/5 m-auto text-center">
+        <div class="py-12 border-b border-gray-200">
+            <h1 class="text-4xl pt-12 pb-8">
+        <a href="/notice/">Notice infomation</a>
+            </h1>
+        </div>
+    </div> 
+       
+{% endblock %}
